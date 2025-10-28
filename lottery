@@ -1,0 +1,31 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+    Scanner input=new Scanner(System.in); 
+    System.out.println("Enter 2 digit number and see your luck");
+    int gess=input.nextInt();
+    int rand=(int)(Math.random()*100);
+    int x=gess/10;
+    int y=gess%10;
+    int d=rand/10;
+    int z=rand%10;
+    int first=0;
+    int second=0;
+    int third=0;
+    if(x==d||x==z||y==d||y==z)
+    first=1;
+    if(x==d||y==z)
+    second=1;
+    if(x==d&&y==z)
+    third=1;
+    if(first==1&&second==0&&third==0)
+    System.out.println("you won 1000$$");
+    if(first==1&&second==1&&third==0)
+    System.out.println("you won 3000$$");
+    if(first==1&&second==1&&third==1)
+    System.out.println("you won 10000$$");
+    if(first==0&&second==0&&third==0)
+    System.out.println("you didn't win try another time");
+    
+    }
+}
